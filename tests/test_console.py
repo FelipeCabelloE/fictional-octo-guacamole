@@ -4,7 +4,7 @@ import click.testing
 import pytest
 
 
-from src.fictional_octo_guacamole import console
+from fictional_octo_guacamole import console
 
 
 @pytest.fixture

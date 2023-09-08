@@ -10,14 +10,14 @@ readme = "README.md"
 
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.8"
 click = "^8.1.7"
 requests = "^2.31.0"
 types-requests = "^2.31.0.2"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.4.2"
-coverage = {extras = ["toml"], version = "^7.3.1"}
+coverage = { extras = ["toml"], version = "^7.3.1" }
 pytest-cov = "^4.1.0"
 
 [build-system]
@@ -25,10 +25,23 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.setuptools]
-package-dir = {"" = "src"}
+package-dir = { "" = "src" }
 
 [tool.setuptools.packages.find]
 where = ["src"]
 
 [tool.poetry.scripts]
 fictional-octo-guacamole = "fictional_octo_guacamole.console:main"
+
+
+# Coverage
+[tool.coverage.paths]
+source = ["src", "*/site-packages"]
+
+[tool.coverage.run]
+branch = true
+source = ["fictional_octo_guacamole"]
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 100
