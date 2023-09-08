@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "fictional-octo-guacamole"
+version = "0.1.0"
+description = ""
+license = "MIT"
+homepage = "https://github.com/FelipeCabelloE/fictional-octo-guacamole"
+repository = "https://github.com/FelipeCabelloE/fictional-octo-guacamole"
+authors = ["FelipeCabelloE <98831429+FelipeCabelloE@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "fictional_octo_guacamole"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
